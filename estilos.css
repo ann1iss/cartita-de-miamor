@@ -101,17 +101,7 @@ body {
     font-size: clamp(85px, 16vw, 120px);
     line-height: 100px;
     -webkit-text-stroke: 3px black;
-    transform: scaleX(1.40);
-}
-
-.sobre button small {
-    position: absolute;
-    top: 37%;
-    left: 18%;
-    width: 100%;
-    color: black;
-    font-size: clamp(13px, 2.5vw, 17px);
-    font-family: Arial, sans-serif;
+    transform: scaleX(1.30);
 }
 
 
