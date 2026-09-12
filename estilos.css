@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    padding: 30px 10px;
+}
+
+.contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    min-height: 600px;
+}
+
+
+/* SOBRE */
+
+.sobre {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(700px, 100%);
+    aspect-ratio: 700 / 405;
+    border: 3px solid black;
+    background-color: white;
+    overflow: hidden;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.solapa {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.solapa::before {
+    content: "";
+    position: absolute;
+    width: 62.15%;
+    height: 3px;
+    background-color: black;
+    top: 0;
+    left: 0;
+    transform: rotate(36.5deg);
+    transform-origin: left center;
+}
+
+.solapa::after {
+    content: "";
+    position: absolute;
+    width: 62.15%;
+    height: 3px;
+    background-color: black;
+    top: 0;
+    right: 0;
+    transform: rotate(-36.5deg);
+    transform-origin: right center;
+}
+
+
+/* BOTÓN DEL CORAZÓN */
+
+.sobre button {
+    position: absolute;
+    top: 40%;
+    left: 46%;
+    transform: translateX(-50%);
+    width: clamp(75px, 14vw, 100px);
+    height: clamp(75px, 14vw, 100px);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 5;
+    transition: transform 0.2s ease;
+}
+
+.sobre button:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.sobre button span {
+    display: block;
+    color: red;
+    font-size: clamp(85px, 16vw, 120px);
+    line-height: 100px;
+    -webkit-text-stroke: 3px black;
+    transform: scaleX(1.40);
+}
+
+.sobre button small {
+    position: absolute;
+    top: 37%;
+    left: 18%;
+    width: 100%;
+    color: black;
+    font-size: clamp(13px, 2.5vw, 17px);
+    font-family: Arial, sans-serif;
+}
+
+
+/* TEXTO DEL SOBRE */
+
+.sobre p {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: clamp(24px, 5vw, 42px);
+    color: black;
+    z-index: 4;
+}
+
+
+/* ANIMACIÓN DEL SOBRE */
+
+.sobre.oculto {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.85);
+    pointer-events: none;
+}
+
+
+/* CARTA */
+
+.carta {
+    position: relative;
+    top: 50px;
+    width: min(700px, 100%);
+    margin: 0 auto;
+    opacity: 0;
+    transform: scale(0.85);
+    pointer-events: none;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.carta img {
+    width: 100%;
+    height: auto;
+}
+
+.carta.visible {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+
+/* TABLET */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px 8px;
+    }
+
+    .contenedor {
+        min-height: 500px;
+    }
+
+    .sobre {
+        top: 20px;
+    }
+
+    .carta {
+        top: 20px;
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 550px) {
+
+    body {
+        padding: 15px 5px;
+    }
+
+    .contenedor {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .sobre {
+        top: 15px;
+        width: 100%;
+    }
+
+    .sobre button {
+        top: 40%;
+    }
+
+    .sobre button span {
+        font-size: 90px;
+        line-height: 80px;
+    }
+
+    .sobre button small {
+        font-size: 13px;
+        top: 38%;
+        left: 12%;
+    }
+
+    .sobre p {
+        bottom: 18px;
+        font-size: 27px;
+    }
+
+    .carta {
+        top: 15px;
+        width: 100%;
+    }
+
+    .carta img {
+        width: 100%;
+        height: auto;
+    }
+
+}

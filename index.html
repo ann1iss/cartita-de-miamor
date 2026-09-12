@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Isack</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <div class="sobre" id="sobre">
+
+            <div class="solapa"></div>
+
+            <button id="abrir">
+                <span>❤</span>
+                <small>Abrir</small>
+            </button>
+
+            <p>Te amo, Isack.</p>
+
+        </div>
+
+
+        <div class="carta" id="carta">
+
+            <img src="cartitaaa.png" alt="Carta de cumpleaños">
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const botonAbrir = document.getElementById("abrir");
+            const sobre = document.getElementById("sobre");
+            const carta = document.getElementById("carta");
+
+            botonAbrir.addEventListener("click", function() {
+
+                sobre.classList.add("oculto");
+
+                setTimeout(function() {
+                    carta.classList.add("visible");
+                }, 400);
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
