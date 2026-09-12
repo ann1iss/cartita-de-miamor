@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Isack</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <div class="sobre" id="sobre">
+
+            <div class="solapa"></div>
+
+            <button id="abrir">
+                <span>❤</span>
+                <small>Abrir</small>
+            </button>
+
+            <p>Te amo, Isack.</p>
+
+        </div>
+
+
+        <div class="carta" id="carta">
+
+            <h1>¡FELIZ CUMPLEAÑOS, AMOR!</h1>
+
+            <div class="fila primera">
+                <img src="imagen1.png">
+
+                <p>
+                    Sé que llevamos poquito tiempo juntos, pero aun así siento que en este poco tiempo te has vuelto alguien demasiado importante para mí. Me alegra muchísimo haberte conocido y poder compartir contigo todos estos momentos, así sea a través de una pantalla.
+                </p>
+            </div>
+
+            <p class="parrafo-centro">
+                Hoy quise aprovechar para decirte lo mucho que me gustas y lo feliz que me hace poder celebrar, aunque sea desde lejos, un día tan especial para ti. Quiero que sepas que encanta tu voz, tu forma de ser y esa manera tan tuya de hacer que una conversación cualquiera termine siendo especial para mí.
+            </p>
+
+            <div class="fila segunda">
+                <p>
+                    Espero que tengas un cumpleaños muy bonito, que puedas disfrutar muchísimo tu día. Que este nuevo año de tu vida venga lleno de momentos bonitos, cosas buenas y muchas razones para sonreír.
+                </p>
+
+                <img src="imagen2.png">
+            </div>
+
+            <div class="fila tercera">
+                <img src="imagen3.png">
+
+                <p>
+                    Y aunque a veces me hagas enojar muuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuucho y sea muy cortante contigo, quiero que sepas que te quiero muchísimo y que me importas más de lo que probablemente imaginas.
+                </p>
+            </div>
+
+            <p class="parrafo-final">
+                Me alegra demasiado haberte conocido y te agradezco por permitirme formar parte de tu vida. Espero poder celebrar muchos cumpleaños más contigo.
+            </p>
+
+            <p class="firma">
+                Te ama tu noviecita celosita<br>
+                -An♡
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const botonAbrir = document.getElementById("abrir");
+            const sobre = document.getElementById("sobre");
+            const carta = document.getElementById("carta");
+
+            botonAbrir.addEventListener("click", function() {
+
+                sobre.classList.add("oculto");
+
+                setTimeout(function() {
+                    carta.classList.add("visible");
+                }, 400);
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
